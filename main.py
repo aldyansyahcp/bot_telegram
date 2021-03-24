@@ -19,7 +19,7 @@ def login(message,comands):
     log_bot.write(text_log)
     log_bot.close()
 
-api = '1679956743:AAGdVrqU543CXmDHgFEH2wi3kFPrJkjYDJM'
+api = 'Your api telegram'
 apik = [
         '0cb413d1b5bb5d6b280aef02',
         '0a05583410c6fadbedd77265',
@@ -243,7 +243,7 @@ def anim2(msg):
 @bot.message_handler(commands=['anime_random'])
 def send_animepict(message):
     cet = message.chat.id
-    response = requests.get("https://afara.my.id/api/anime-random-image", headers = headers).json()
+    response = requests.get("http://public-restapi.herokuapp.com/api/anime-random-image", headers = headers).json()
     bot.send_photo(cet, response['image'])
 
 @bot.message_handler(commands=['anime_baka'])
