@@ -1,0 +1,7 @@
+pytelegrambotapi==3.7.6
+googletrans==3.1.0a0
+datetime
+pillow
+requests
+json
+random
