@@ -5,7 +5,6 @@ git clone https://github.com/kroemen/bot_telegram
 cd bot_telegram
 ls
 pip2 install -r requirements.txt
-mkdir pict
 python main.py
 ```
 ## Contact
