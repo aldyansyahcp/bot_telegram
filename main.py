@@ -21,7 +21,7 @@ def login(message,comands):
 
 api = 'Your api telegram'
 apik = [
-        'Your Apikey Lollhuman'
+        'Your Apikey Lolhuman'
         ]
 apikey = random.choice(apik)
 bot = telebot.TeleBot(api)
@@ -44,14 +44,12 @@ def selamat_datang(msg):
 
 @bot.message_handler(commands=['help'])
 def perintah(msg):
-    bot.reply_to(msg,('Okaerinasai Onii-Chan..  :-)\nlist command\n====================\n==>> Randomm \n/random_quotes\n/chord_gitar [keyword]\n/wiki [keyword]\n/prank_call 898xxx\n/translate_jpan\n/yt_mp3 [code] \n/yt_vid [code]\n\n==>> Animes \n/anim_quotes\n/anim_character [keyword]\n/anim_batch [keyword]\n/animpict_search [keyword]\n/anime_neko\n/anime_loli\n/anime_random\n/anime_baka\n/nsfw_neko\n/nsfw_waifu\n\n==>> Information\n/ig_stalk [username]\n/jadwal_sholat [city]\n/weather [city]\n/earthquake\n======================\nExcept: for yt_mp3 & yt_vid\nyt_mp3 https://www,youtube,com/watch?v=H-Z2elwvBS8\n==>> yt_mp3 H-Z2elwvBS8'))
+    bot.reply_to(msg,('Okaerinasai Onii-Chan..  :-)\nlist command\n====================\n==>> Randomm \ntext_sound [keyword]\n/text_img [keyword]\n/nulis [keyword]\n/random_quotes\n/chord_gitar [keyword]\n/wiki [keyword]\n/prank_call 898xxx\n/translate_jpan\n/yt_mp3 [code] \n/yt_vid [code]\n\n==>> Animes \n/anim_quotes\n/anim_character [keyword]\n/anim_batch [keyword]\n/animpict_search [keyword]\n/anime_neko\n/anime_loli\n/anime_random\n/anime_baka\n/nsfw_neko\n/nsfw_waifu\n\n==>> Information\n/ig_stalk [username]\n/jadwal_sholat [city]\n/weather [city]\n/earthquake\n======================\nExcept: for yt_mp3 & yt_vid\nyt_mp3 https://www,youtube,com/watch?v=H-Z2elwvBS8\n==>> yt_mp3 H-Z2elwvBS8'))
 
 @bot.message_handler(commands=[''])
 
 @bot.message_handler(commands=['text_sound'])
-
 def teksd(msg):
-
   cet = msg.chat.id
   tek = msg.text
   nam = msg.chat.first_name
@@ -373,6 +371,7 @@ def send_wiki(msg):
             pass
     except Exception as e:
         pass
+
 @bot.message_handler(commands=['yt_mp3'])
 def yutub(msg):
     try:
