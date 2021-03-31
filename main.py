@@ -21,12 +21,7 @@ def login(message,comands):
 
 api = 'Your api telegram'
 apik = [
-        '0cb413d1b5bb5d6b280aef02',
-        '0a05583410c6fadbedd77265',
-        '0a05583410c6fadbedd77265',
-        '6561c76f08ae9517606e6896',
-        '54e5f630beeab52bc3bcece8',
-        '1382b7ecbff60da6ee1ea86d'
+        'Your Apikey Lollhuman'
         ]
 apikey = random.choice(apik)
 bot = telebot.TeleBot(api)
@@ -53,7 +48,50 @@ def perintah(msg):
 
 @bot.message_handler(commands=[''])
 
-@bot.message_handler(commands=['ig_stalk'])
+@bot.message_handler(commands=['text_sound'])
+
+def teksd(msg):
+
+  cet = msg.chat.id
+  tek = msg.text
+  nam = msg.chat.first_name
+  if " " in tek:
+    fin = tek.split(" ",1)
+    url = "https://salism3api.pythonanywhere.com/text2sound/?text="+fin[1]+"&languageCode=id"
+    res = requests.get(url)
+    print(url)
+    open("sound/sound_"+nam+".mp3", 'wb').write(res.content)
+    lagu = open('sound/sound_'+nam+'.mp3','rb')
+    bot.send_audio(cet, lagu)
+
+@bot.message_handler(commands=['text_img'])
+def tekmg(msg):
+  cet = msg.chat.id
+  tek = msg.text
+  if " " in tek:
+    fin = tek.split(" ",1)
+    res = requests.get("https://salism3api.pythonanywhere.com/text2img/?text="+fin[1]).json()
+    if res["message"] == "Sukses!":
+      bot.send_photo(cet, res["image"])
+    else:
+      bot.send_message(cet,res["message"])
+  else:
+    bot.send_message(cet, "ext: //text_img Sumimasen")
+    
+@bot.message_handler(commands=['nulis'])
+def nulis(msg):
+    cet = msg.chat.id
+    tek = msg.text
+    if " " in tek:
+      fin = tek.split(" ",1)
+      res = requests.get("https://salism3api.pythonanywhere.com/write?text="+fin[1]).json()
+      if res["message"] == "Sukses!":
+        bot.send_photo(cet, res["images"][0])
+      else:
+        bot.send_message(cet, res["success"])
+    else:
+      bot.send_message(cet,"ext://nulis Dareka arimasuka")@bot.message_handler(commands=['ig_stalk'])
+
 def igstalk(msg):
     cet = msg.chat.id
     tek = msg.text
