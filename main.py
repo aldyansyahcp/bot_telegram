@@ -21,14 +21,9 @@ def login(message):
     log_bot.write(text_log)
     log_bot.close()
 
-api = '1679956743:AAGdVrqU543CXmDHgFEH2wi3kFPrJkjYDJM'
+api = ' Your Telegram bot API '
 apik = [
-        '0cb413d1b5bb5d6b280aef02',
-        '0a05583410c6fadbedd77265',
-        '0a05583410c6fadbedd77265',
-        '6561c76f08ae9517606e6896',
-        '54e5f630beeab52bc3bcece8',
-        '1382b7ecbff60da6ee1ea86d'
+        ' Your Lolhuman Apikey '
         ]
 apikey = random.choice(apik)
 bot = telebot.TeleBot(api)
@@ -39,8 +34,6 @@ ses = requests.session()
 headers = {
     'Cache-Control':'max-age=0'
         }
-sen = ("Kau hanyalah setitik debu di alam semesta dan dunia tak peduli sedikit pun jika kau mati atau menang hari ini. Kematianmu tidaklah terlalu berharga daripada kematian seekor cacing. Mayat seekor cacing bisa menjadi makanan burung atau pupuk yang menyuburkan tanah. Jika kau mati, tubuhmu akan dikubur atau dibakar dan hanya menjadi asap yang berseliweran tanpa tujuan di angkasa raya. Semua pencapaianmu seperti kerikil-kerikil kecil yang hancur digilas roda waktu. Jika kau hidup, kau pikir kau punya waktu yang panjang dalam kehidupan yang tak terbatas ini? Jika kau mati, alam semesta masih akan tetap sama.")
-
 @bot.message_handler(commands=['start'])
 def selamat_datang(msg):
     login(msg)
