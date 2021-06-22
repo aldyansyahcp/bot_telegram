@@ -23,5 +23,3 @@ $ls
 $pip2 install -r requirements.txt
 $python main.py
 ```
-## Contact
-* FB Denvert leistuch
